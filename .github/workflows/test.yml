@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Get code
@@ -22,7 +22,7 @@ jobs:
 
   deloy:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Get code
       uses: actions/checkout@v4
